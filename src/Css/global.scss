@@ -1,0 +1,38 @@
+// cores 
+
+  $cor-principal: #363856;
+  $cor-botao: #EFEFEF;
+  $cor-preta: #000;
+  $cor-branca: #fff;
+  $cor-amarela: #d0d54b;
+
+
+//fontes
+$fonte-1: 'Roboto', sans-serif;
+
+// Função pra fonte ficar com o tamanho de em
+@function em($pixel, $contexto: 16) {
+  @return $pixel / $contexto + em;
+}
+
+//mixins 
+
+// Mixin de tipografia
+@mixin tipo-1($tamanho) {
+  font-family: $fonte-1;
+  @if $tamanho == 18 {
+    font-size: em(18);
+    line-height: em(30, 18);
+    // Tem que ser passado o valor anterior do line-height em pixels e o valor que quer que seja em (em) para que funcione e transforma em 18px só que com a formatação de (em)
+  }
+}
+
+// Mixin de sombra
+// se passar (...) vai passar mais de um valor que eu quiser
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+  -moz-box-shadow: $shadow;
+  box-shadow: $shadow;
+}
+
+
