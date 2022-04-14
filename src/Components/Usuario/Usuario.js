@@ -12,7 +12,7 @@ const Usuario = (props) => {
         <div className="bgDados">
           <p>{props.name}</p>
           <p>
-            ID:{props.id} - Username: {props.name}
+            ID:{props.id} - Username: {props.username}
           </p>
         </div>
         <button onClick={props.onClick}>Pagar</button>
