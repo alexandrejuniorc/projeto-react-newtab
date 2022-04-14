@@ -10,9 +10,7 @@ const Pagamento = () => {
 
       <div className="bgSelect">
         <select name="" id="">
-          <option value disabled selected>
-            Nº Cartão
-          </option>
+          <option>Nº Cartão</option>
         </select>
       </div>
       <div className="botaoPagar">
