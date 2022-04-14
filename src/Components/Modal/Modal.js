@@ -7,9 +7,9 @@ const Modal = ({ name, children }) => {
       <div className="modal">
         <button className="fechar" />
         <div>
-          <h4>
-            Pagamento para <strong>{name}</strong>
-          </h4>
+          <p>
+            Pagamento para <strong> {name} </strong>
+          </p>
         </div>
         <div className="ctModal">{children}</div>
       </div>

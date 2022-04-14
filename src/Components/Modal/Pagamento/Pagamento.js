@@ -4,13 +4,19 @@ import './styles.scss';
 const Pagamento = () => {
   return (
     <div className="bgPagamento">
-      <input type="text" />
-      <div>
+      <div className="bgInput">
+        <input type="text" placeholder="R$ 0,00" />
+      </div>
+
+      <div className="bgSelect">
         <select name="" id="">
           <option value disabled selected>
             Nº Cartão
           </option>
         </select>
+      </div>
+      <div className="botaoPagar">
+        <button type="submit">Pagar</button>
       </div>
     </div>
   );
