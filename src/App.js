@@ -27,7 +27,11 @@ function App() {
       ))}
       {modal
         ? usuario.map((pessoa) => (
-            <Modal name={pessoa.name}>
+            <Modal
+              name={pessoa.name}
+              fechar={() => setModal(false)}
+              key={pessoa.name}
+            >
               <Pagamento />
             </Modal>
           ))
