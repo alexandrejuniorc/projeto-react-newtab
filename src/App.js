@@ -35,20 +35,22 @@ function App() {
       (cartaoObjeto) => cartaoObjeto.card_number === cartao,
     );
 
-    await await fetch(
-      'https://run.mocky.io/v3/533cd5d7-63d3-4488-bf8d-4bb8c751c989',
-      {
-        method: 'POST',
-        body: {
-          card_number: cartao,
-          cvv: selecaoCartao,
-          expiry_date: selecaoCartao.expiry_date,
+    (
+      await fetch(
+        'https://run.mocky.io/v3/533cd5d7-63d3-4488-bf8d-4bb8c751c989',
+        {
+          method: 'POST',
+          body: {
+            card_number: cartao,
+            cvv: selecaoCartao,
+            expiry_date: selecaoCartao.expiry_date,
 
-          destination_user_id: pagamento.id,
+            destination_user_id: pagamento.id,
 
-          value: value,
+            value: value,
+          },
         },
-      },
+      )
     ).json();
 
     if (cartao === '1111111111111111') {
@@ -102,38 +104,38 @@ function App() {
                     maxLength="30"
                     required
                   />
-                </form>
 
-                <div className="bgSelect">
-                  <select name="selecionaCartao">
-                    <option disabled>Nº Cartão</option>,
-                    {cartoes.map((cartao) => {
-                      return (
-                        <option
-                          key={cartao.card_number}
-                          value={cartao.card_number}
-                        >
-                          Cartão com final {cartao.card_number.substring(12)}
-                        </option>
-                      );
-                    })}
-                  </select>
-                </div>
-                <div className="botaoPagar">
-                  <button type="submit">Pagar</button>
-                </div>
+                  <div className="bgSelect">
+                    <select name="selecionaCartao">
+                      <option disabled>Nº Cartão</option>,
+                      {cartoes.map((cartao) => {
+                        return (
+                          <option
+                            key={cartao.card_number}
+                            value={cartao.card_number}
+                          >
+                            Cartão com final {cartao.card_number.substring(12)}
+                          </option>
+                        );
+                      })}
+                    </select>
+                  </div>
+                  <div className="botaoPagar">
+                    <input type="submit" value="Pagar" />
+                  </div>
+                </form>
               </div>
             </Pagamento>
           </Modal>
         ) : null
       }
       {pagamentoSucesso && (
-        <Modal>
+        <Modal fechar={() => setSucesso(false)}>
           <Aprovado />
         </Modal>
       )}
       {pagamentoErro && (
-        <Modal>
+        <Modal fechar={() => setErro(false)}>
           <Recusado />
         </Modal>
       )}
