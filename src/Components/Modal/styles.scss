@@ -21,19 +21,6 @@
   position: relative;
   animation: modal 0.3s forwards;
 
-
-  p {
-    font-family: $fonte-1;
-    display: flex;
-    font-weight: bold;
-    background: $cor-principal ;
-    height: 80px;
-    top: 0;
-    align-items: center;
-    padding-left: 20px;
-    color: $cor-branca
-  }
-
   button[type="submit"] {
     display: block;
     background: $cor-principal;
@@ -48,8 +35,27 @@
 
   strong{
     color: $cor-amarela;
-    padding-left: 5px;
   }
+}
+
+.bgSubtitulo{
+  padding-left: 5px;
+}
+
+.bgTitulo{
+  width: 100%;
+  p{
+    font-family: $fonte-1;
+    display: flex;
+    font-weight: bold;
+    background: $cor-principal ;
+    height: 80px;
+    top: 0;
+    align-items: center;
+    padding-left: 20px;
+    color: $cor-branca
+  }
+
 }
 
 // estilização do input que coloca o valor
