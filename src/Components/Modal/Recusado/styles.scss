@@ -1,0 +1,17 @@
+@import '../../../Css/global.scss';
+
+.bgTexto{
+  display: flex;
+  justify-content: center;
+
+  p{
+    margin: 50px;
+    font-family: $fonte-1;
+  }
+}
+
+.corRecusado{
+  strong{
+  color: $cor-fechar;
+}
+}
