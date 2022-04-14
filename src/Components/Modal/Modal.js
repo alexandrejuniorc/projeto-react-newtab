@@ -1,16 +1,18 @@
 import React from 'react';
 import './styles.scss';
 
-const Modal = (props, children) => {
+const Modal = ({ name, children }) => {
   return (
-    <div>
-      <button onClick={props.onClick} className="fechar" />
-      <div>
-        <h4>
-          Pagamento para <strong>{props.name}</strong>
-        </h4>
+    <div className="bgModal">
+      <div className="modal">
+        <button className="fechar" />
+        <div>
+          <h4>
+            Pagamento para <strong>{name}</strong>
+          </h4>
+        </div>
+        <div className="ctModal">{children}</div>
       </div>
-      <div className="ctModal">{children}</div>
     </div>
   );
 };
