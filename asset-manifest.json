@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/projeto-react-newtab/static/css/main.2d102639.css",
+    "main.css": "/projeto-react-newtab/static/css/main.864c3238.css",
     "main.js": "/projeto-react-newtab/static/js/main.bad12870.js",
     "index.html": "/projeto-react-newtab/index.html",
-    "main.2d102639.css.map": "/projeto-react-newtab/static/css/main.2d102639.css.map",
+    "main.864c3238.css.map": "/projeto-react-newtab/static/css/main.864c3238.css.map",
     "main.bad12870.js.map": "/projeto-react-newtab/static/js/main.bad12870.js.map"
   },
   "entrypoints": [
-    "static/css/main.2d102639.css",
+    "static/css/main.864c3238.css",
     "static/js/main.bad12870.js"
   ]
 }
