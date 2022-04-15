@@ -23,6 +23,32 @@
       background: $cor-botao;
     }
   }
+
+  // responsivo
+  @include responsivo(mobile){
+    flex-direction: column;
+    box-sizing: border-box;
+    height: max-content;
+
+    .bgImg{
+        img{
+          margin: 20px 0 ;
+        }
+    }
+
+    .bgDados{
+      p{
+        display: flex;
+        justify-content: center;
+        margin: 5px 0 ;
+      }
+    }
+
+    button{
+      margin: 20px 0;
+    }
+
+  }
 }
 
 .bgImg{

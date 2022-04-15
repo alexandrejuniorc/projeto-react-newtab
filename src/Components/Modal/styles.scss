@@ -12,7 +12,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow-x: hidden;
+ 
+
+  &:active{
+    html,body{
+      overflow-y: hidden;
+    }
+  }
 }
 
 /* background do modal */
@@ -37,6 +43,14 @@
   strong{
     color: $cor-amarela;
   }
+
+  @include responsivo(mobile){
+ .modal{
+   input{
+     width: 100%;
+   }
+ }
+  } 
 }
 
 .bgSubtitulo{
