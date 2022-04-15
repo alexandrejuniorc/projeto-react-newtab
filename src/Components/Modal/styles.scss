@@ -13,12 +13,6 @@
   justify-content: center;
   align-items: center;
  
-
-  &:active{
-    html,body{
-      overflow-y: hidden;
-    }
-  }
 }
 
 /* background do modal */
@@ -45,12 +39,8 @@
   }
 
   @include responsivo(mobile){
- .modal{
-   input{
-     width: 100%;
-   }
- }
-  } 
+    width: 80%;
+  }
 }
 
 .bgSubtitulo{
@@ -83,14 +73,37 @@
   input{
   margin-top: 20px;
   width: 70%;
-  padding: 0.7rem 0.5rem;
+  padding: 15px;
   box-sizing: border-box; /* pra não estourar o container */
    border: 1px solid $cor-botao;
    border-radius: 4px;
    outline: none;
   
   }
- 
+  
+  // responsivo
+  @include responsivo(mobile){
+    margin: 15px;
+    input{
+      width: 100%;
+      margin: 20px 10px;
+      padding: 15px;
+    }
+    .bgSelect{
+      select{
+         width: 100%;
+         padding: 15px;
+        }
+    }
+
+    .botaoPagar{
+      input{
+        width: 80%;
+      }
+    }
+
+  }
+
 }
 
 // estilização do select dos cartões
@@ -100,8 +113,8 @@
   justify-content: center;
   margin-top: 20px;
    select{
-    width: 40%;
-    padding: 0.7rem 2rem;
+    width: 60%;
+    padding: 15px;
     border: 1px solid $cor-botao;
     border-radius: 4px;
     outline: none;
